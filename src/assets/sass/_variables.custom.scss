@@ -1,0 +1,188 @@
+//
+// Global variables for Bootstrap customization.
+// To override any Bootstrap variable safely you can use _variables.demo.scss
+//
+
+// Bootstrap base colors
+$white:    											#ffffff !default;
+$black:    											#000000 !default;
+$gray-100: 										    if(isDarkMode(), #1b1b29, #F5F8FA) !default;
+$gray-200: 										    if(isDarkMode(), #2B2B40, #EFF2F5) !default;
+$gray-300: 										    if(isDarkMode(), #323248, #E4E6EF) !default;
+$gray-400: 										    if(isDarkMode(), #474761, #B5B5C3) !default;
+$gray-500: 										    if(isDarkMode(), #565674, #A1A5B7) !default;
+$gray-600: 										    if(isDarkMode(), #6D6D80, #7E8299) !default;
+$gray-700: 										    if(isDarkMode(), #92929F, #5E6278) !default;
+$gray-800: 										    if(isDarkMode(), #CDCDDE, #3F4254) !default;
+$gray-900: 										    if(isDarkMode(), #FFFFFF, #181C32) !default;
+$text-muted:                                        $gray-500 !default;
+
+// Bootstrap gray colors map
+$grays: (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+	"700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+) !default; // Custom variable
+
+// Bootstrap custom colors
+$blue:                                             #009ef6 !default;
+$indigo:                                           #6610f2 !default;
+$purple:                                           #6f42c1 !default;
+$pink:                                             #d63384 !default;
+$red:                                              #dc3545 !default;
+$orange:                                           #fd7e14 !default;
+$yellow:                                           #ffc107 !default;
+$green:                                            #198754 !default;
+$teal:                                             #20c997 !default;
+$cyan:                                             #0dcaf0 !default;
+
+// Bootstrap colors map
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+) !default;
+
+
+// Bootstrap contextual colors
+// Dark colors
+$dark:          									$gray-900 !default; // Bootstrap variable
+$dark-active:          								if(isDarkMode(), darken($gray-900, 9%), darken($gray-900, 3%)) !default;
+$dark-light:          							    $gray-200 !default; // Custom variable
+$dark-inverse:         								if(isDarkMode(), $gray-100, $white) !default; // Custom variable
+
+// Primary colors
+$primary:       									#3699FF !default; // Bootstrap variable
+$primary-active:    								#187DE4 !default; // Custom variable
+$primary-light:    								    if(isDarkMode(), #212E48, #F1FAFF) !default; // Custom variable
+$primary-inverse:  									$white !default;  // Custom variable
+
+// Secondary colors
+$secondary:     									$gray-300 !default; // Bootstrap variable
+$secondary-active:  								$gray-400 !default; // Custom variable
+$secondary-light:  									$gray-100 !default; // Custom variable
+$secondary-inverse:									$gray-800 !default; // Custom variable
+
+// Light colors
+$light:     									    $gray-100 !default; // Bootstrap variable
+$light-active:  								    $gray-300 !default; // Custom variable
+$light-inverse:									    if(isDarkMode(),$gray-800, $gray-600) !default; // Custom variable
+$lighten:                                           rgba($light, 0.5); // Custom variable
+
+// Success colors
+$success:       									#1BC5BD !default; // Bootstrap variable
+$success-active:    								#0BB7AF !default; // Custom variable
+$success-light:    									if(isDarkMode(), #1C3833, #C9F7F5) !default; // Custom variable
+$success-inverse:  									$white !default; // Custom variable
+
+// Inco colors
+$info:         		 								#8950FC !default; // Bootstrap variable
+$info-active:   		 							#7337EE !default; // Custom variable
+$info-light:   		 								if(isDarkMode(), #2F264F, #EEE5FF) !default; // Custom variable
+$info-inverse: 		 								$white !default; // Custom variable
+
+// Warning colors
+$warning:       									#FFA800 !default; // Bootstrap variable
+$warning-active:    								#EE9D01 !default; // Custom variable
+$warning-light:    									if(isDarkMode(), #392F28, #FFF4DE) !default; // Custom variable
+$warning-inverse:  									$white !default; // Custom variable
+
+// Danger colors
+$danger:        									#F64E60 !default; // Bootstrap variable
+$danger-active:     								#EE2D41 !default; // Custom variable
+$danger-light:     									if(isDarkMode(), #3A2434, #FFE2E5) !default; // Custom variable
+$danger-inverse:   									$white !default; // Custom variable
+
+// White colors
+$white:    											$white !default; // Bootstrap variable
+$white-active:    									$gray-100 !default; // Custom variable
+$white-inverse:    									$gray-600 !default; // Custom variable
+
+
+// Theme colors
+$theme-colors: (
+	"white":      $white,  // custom color type
+    "light":      $light,
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "dark":       $dark
+) !default;
+
+// Hover colors
+$theme-active-colors: (
+	"white":      $white-active,   // custom color type
+	"primary":    $primary-active,
+    "secondary":  $secondary-active,
+    "light":      $light-active,
+    "success":    $success-active,
+    "info":       $info-active,
+    "warning":    $warning-active,
+    "danger":     $danger-active,
+    "dark":       $dark-active
+) !default;  // Custom variable
+
+// Inverse colors
+$theme-inverse-colors: (
+	"white":      $white-inverse,
+	"primary":    $primary-inverse,
+    "secondary":  $secondary-inverse,
+    "light":      $light-inverse,
+    "success":    $success-inverse,
+    "info":       $info-inverse,
+    "warning":    $warning-inverse,
+    "danger":     $danger-inverse,
+    "dark":       $dark-inverse
+) !default;  // Custom variable
+
+// Light colors
+$theme-light-colors: (
+	"primary":    $primary-light,
+    "success":    $success-light,
+    "info":       $info-light,
+    "warning":    $warning-light,
+    "danger":     $danger-light,
+    "dark":       $dark-light
+) !default;  // Custom variable
+
+// Text colors
+$theme-text-colors: (
+    "white":      $white,
+	"primary":    $primary,
+    "secondary":  $secondary,
+    "light":      $light,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "dark":       $dark,
+    "muted":      $text-muted,
+    "gray-100":   $gray-100,
+    "gray-200":   $gray-200,
+    "gray-300":   $gray-300,
+    "gray-400":   $gray-400,
+    "gray-500":   $gray-500,
+    "gray-600":   $gray-600,
+    "gray-700":   $gray-700,
+    "gray-800":   $gray-800,
+    "gray-900":   $gray-900
+) !default;  // Custom variable
+
