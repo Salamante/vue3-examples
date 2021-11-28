@@ -2,23 +2,45 @@
   <div class="d-flex">
     <div class="">
       <router-link
+        v-slot="{ navigate, href }"
         to="/smooth-scroll">
-      <a class="btn btn- btn-primary" href="#" role="button">Smooth Scroll</a>
+      <a @click="navigate" class="btn btn- btn-primary" :href="href" role="button">Smooth Scroll</a>
       </router-link>
     </div>
-    <div class="ms-4">
-      <a class="btn btn- btn-primary" href="#" role="button">Smooth Scroll</a>
-    </div>
-        <div class="ms-4">
-      <a class="btn btn- btn-primary" href="#" role="button">Smooth Scroll</a>
-    </div>
-    <div class="ms-4">
-      <p>TEST</p>
+
+    <div class="ms-3">
+      <router-link
+        v-slot="{ navigate, href }"
+        to="/animate">
+      <a @click="navigate" class="btn btn- btn-primary" :href="href" role="button">Animations</a>
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
+import Valid from "../services/validate"
+export default {
+  data() {
+    return {
+      isActive: false
+    }
+  },
+  mounted() {
+        const testVar = Valid;
+        console.log(testVar);
+  },
+  methods: {
+    toggle() {
+      this.isActive = !this.isActive;
+    }
+  },
+  watch: {
+    isActive(val) {
+      console.log(val);
+    }
+  }
+}
 </script>
 
 <style lang="scss">

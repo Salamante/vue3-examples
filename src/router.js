@@ -11,6 +11,11 @@ const routes = [
       path: "/smooth-scroll",
       name: "scroll",
       component: () => import("./components/smoothScroll.vue")
+    },
+    {
+      path: "/animate",
+      name: "animate",
+      component: () => import("./components/animate.css.vue")
     }
   ]
 const router = createRouter({
