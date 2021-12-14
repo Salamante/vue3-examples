@@ -12,7 +12,7 @@
       <router-link
         v-slot="{ navigate, href }"
         to="/animate">
-      <a @click="navigate" class="btn btn- btn-primary" :href="href" role="button">Animations</a>
+      <a id="animations" @click="navigate" class="btn btn-primary" :href="href" role="button">Animations</a>
       </router-link>
     </div>
   </div>
@@ -23,7 +23,8 @@ import Valid from "../services/validate"
 export default {
   data() {
     return {
-      isActive: false
+      isActive: false,
+      text:""
     }
   },
   mounted() {
@@ -43,5 +44,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
+#animations {
+      font-size: v-bind(text);
+}
+
 </style>
