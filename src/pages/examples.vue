@@ -15,6 +15,14 @@
       <a id="animations" @click="navigate" class="btn btn-primary" :href="href" role="button">Animations</a>
       </router-link>
     </div>
+
+    <div class="ms-3">
+      <router-link
+        v-slot="{ navigate, href }"
+        to="/intersectionobs">
+      <a id="animations" @click="navigate" class="btn btn-primary" :href="href" role="button">Intersection Observer</a>
+      </router-link>
+    </div>
   </div>
 </template>
 

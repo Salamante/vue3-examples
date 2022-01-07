@@ -16,6 +16,11 @@ const routes = [
       path: "/animate",
       name: "animate",
       component: () => import("./components/animate.css.vue")
+    },
+    {
+      path: "/intersectionobs",
+      name: "intersection",
+      component: () => import("./components/IntersectionObserver.vue")
     }
   ]
 const router = createRouter({

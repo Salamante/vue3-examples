@@ -16,6 +16,11 @@ export default {
 
 <style lang="scss">
 @import "assets/sass/style.scss";
+html,
+#app {
+  background: rgb(92, 92, 92);
+  height: 100%;
+}
 </style>
 
 
