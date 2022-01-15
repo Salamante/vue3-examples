@@ -13,6 +13,11 @@ const routes = [
       component: () => import("./components/smoothScroll.vue")
     },
     {
+      path: "/css",
+      name: "css",
+      component: () => import("./components/css/test.vue")
+    },
+    {
       path: "/animate",
       name: "animate",
       component: () => import("./components/animate.css.vue")
