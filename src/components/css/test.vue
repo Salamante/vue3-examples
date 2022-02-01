@@ -12,9 +12,39 @@
 </template>
 
 <script>
+import { onMounted } from 'vue'
 export default {
   setup() {
-    
+    onMounted(() => {
+      const debounce = (func, wait) => {
+        let timeout;
+
+        return function executedFunction(...args) {
+          const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+          };
+
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+        };
+      };
+
+      var returnedFunction = debounce(function() {
+          console.log("resized")
+        }, 250);
+
+        window.addEventListener('resize', returnedFunction);
+
+        const to = setTimeout(() => {
+          console.log("%ctimeout func", "color: red")
+        },2000)
+
+        const to2 = setTimeout(() => {
+          clearTimeout(to)
+          console.log("%ctimeout is cleared", "color: red")
+        },500)
+    })
   },
 }
 </script>
